@@ -23,7 +23,7 @@ function Video(){
             onClick={handleVideoPress}
             className='video__player'
             loop
-             src="https://media.istockphoto.com/videos/heads-speaking-video-id1193901766" ></video>
+             src="https://static.videezy.com/system/resources/previews/000/039/967/original/drone-circles-tourist-boat-4K.mp4" ></video>
            < VideoFooter/>
             {/* VideoSidebar */}
         </div>
