@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react'
 import VideoFooter from './VideoFooter'
+import VideoSideBar from './VideoSideBar'
 import './video.css'
 
-function Video(){
+
+function Video({url, channel, description, song, likes, shares, messages}){
     const [playing, setPlaying] = useState(false)
     const videoRef = useRef(null)
 
@@ -23,9 +25,9 @@ function Video(){
             onClick={handleVideoPress}
             className='video__player'
             loop
-             src="https://static.videezy.com/system/resources/previews/000/039/967/original/drone-circles-tourist-boat-4K.mp4" ></video>
-           < VideoFooter/>
-            {/* VideoSidebar */}
+             src={url} ></video>
+           < VideoFooter channel={channel} description={description} song={song}/>
+            <VideoSideBar likes={likes} shares={shares} messages={messages}/>
         </div>
     )
 }
